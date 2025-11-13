@@ -189,7 +189,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!IdPro.Value</Value>
+                              <Value>=First(Fields!IdPro.Value, "DataSetDetalle")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -219,7 +219,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!NomPro.Value</Value>
+                              <Value>=First(Fields!NomPro.Value, "DataSetDetalle")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -249,7 +249,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!CantCom.Value</Value>
+                              <Value>=First(Fields!CantCom.Value, "DataSetDetalle")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -279,7 +279,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PrePro.Value</Value>
+                              <Value>=First(Fields!PrePro.Value, "DataSetDetalle")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -302,21 +302,20 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PreCom">
+                    <Textbox Name="TotalLinea">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PreCom.Value</Value>
+                              <Value>=Sum(Fields!TotalLinea.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PreCom</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -457,21 +456,20 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox17">
+                    <Textbox Name="PreCom">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!PreCom.Value, "DataSetCompraReporte")</Value>
+                              <Value>=Sum(Fields!PreCom.Value, "DataSetDetalle")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox17</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -619,7 +617,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!PreCom.Value, "DataSetCompraReporte")</Value>
+                              <Value>=Sum(Fields!PreCom.Value, "DataSetDetalle")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -665,7 +663,7 @@
             <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetCompraReporte</DataSetName>
+        <DataSetName>DataSetDetalle</DataSetName>
         <Top>0.10583cm</Top>
         <Left>1.57077cm</Left>
         <Height>2.4cm</Height>
@@ -723,7 +721,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!IdPrv.Value, "DataSetCompraReporte")</Value>
+                  <Value>=First(Fields!IdPrv.Value, "DataSetEncabezado")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -782,7 +780,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!FecComEnc.Value, "DataSetCompraReporte")</Value>
+                  <Value>=First(Fields!FecComEnc.Value, "DataSetEncabezado")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -841,7 +839,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!IdEncabe.Value, "DataSetCompraReporte")</Value>
+                  <Value>=First(Fields!IdComp.Value, "DataSetEncabezado")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -900,7 +898,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!NomPrv.Value, "DataSetCompraReporte")</Value>
+                  <Value>=First(Fields!NomPrv.Value, "DataSetEncabezado")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -1105,7 +1103,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetCompraReporte">
+    <DataSet Name="DataSetEncabezado">
       <Query>
         <DataSourceName>BD_LACTEOSCALEBDataSetReporteCompra</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -1115,21 +1113,41 @@
           <DataField>IdComp</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="CantCom">
-          <DataField>CantCom</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="PreCom">
-          <DataField>PreCom</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="IdEncabe">
-          <DataField>IdEncabe</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="FecComEnc">
           <DataField>FecComEnc</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="IdProv">
+          <DataField>IdProv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomPrv">
+          <DataField>NomPrv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdPrv">
+          <DataField>IdPrv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>BD_LACTEOSCALEBDataSetReporteCompra</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\maria\Downloads\LacteosCaleb-master\LacteosCaleb-master\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteCompra.xsd</rd:SchemaPath>
+        <rd:TableName>ReporteCompra_Encabezado</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>ReporteCompra_EncabezadoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSetDetalle">
+      <Query>
+        <DataSourceName>BD_LACTEOSCALEBDataSetReporteCompra</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="IdComp">
+          <DataField>IdComp</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="IdPro">
           <DataField>IdPro</DataField>
@@ -1139,26 +1157,30 @@
           <DataField>NomPro</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="CantCom">
+          <DataField>CantCom</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="PrePro">
           <DataField>PrePro</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="IdPrv">
-          <DataField>IdPrv</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="PreCom">
+          <DataField>PreCom</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="NomPrv">
-          <DataField>NomPrv</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="TotalLinea">
+          <DataField>TotalLinea</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>BD_LACTEOSCALEBDataSetReporteCompra</rd:DataSetName>
-        <rd:SchemaPath>C:\LacteosCaleb\LacteosCaleb\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteCompra.xsd</rd:SchemaPath>
-        <rd:TableName>ReporteCompra</rd:TableName>
+        <rd:SchemaPath>C:\Users\maria\Downloads\LacteosCaleb-master\LacteosCaleb-master\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteCompra.xsd</rd:SchemaPath>
+        <rd:TableName>ReporteCompra_Detalle</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ReporteCompraTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>ReporteCompra_DetalleTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

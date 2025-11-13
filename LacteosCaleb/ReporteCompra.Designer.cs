@@ -29,48 +29,47 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reporteCompraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BD_LACTEOSCALEBDataSetReporteCompra = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompra();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.reporteCompraTableAdapter = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompraTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.reporteCompraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BD_LACTEOSCALEBDataSetReporteCompra)).BeginInit();
             this.SuspendLayout();
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSetCompraReporte";
+            reportDataSource1.Value = this.reporteCompraBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LacteosCaleb.ReportCompra.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1067, 554);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
             // reporteCompraBindingSource
             // 
-            this.reporteCompraBindingSource.DataMember = "ReporteCompra";
+            // Ajuste: usar la tabla tipada de encabezado que existe en el DataSet
+            this.reporteCompraBindingSource.DataMember = "ReporteCompra_Encabezado";
             this.reporteCompraBindingSource.DataSource = this.BD_LACTEOSCALEBDataSetReporteCompra;
             // 
-            // bD_LACTEOSCALEBDataSetReporteCompra
+            // BD_LACTEOSCALEBDataSetReporteCompra
             // 
             this.BD_LACTEOSCALEBDataSetReporteCompra.DataSetName = "BD_LACTEOSCALEBDataSetReporteCompra";
             this.BD_LACTEOSCALEBDataSetReporteCompra.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSetCompraReporte";
-            reportDataSource2.Value = this.reporteCompraBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LacteosCaleb.ReportCompra.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // reporteCompraTableAdapter
-            // 
-            this.reporteCompraTableAdapter.ClearBeforeFill = true;
-            // 
             // ReporteCompra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReporteCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteCompra";
@@ -86,6 +85,5 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource reporteCompraBindingSource;
         private BD_LACTEOSCALEBDataSetReporteCompra BD_LACTEOSCALEBDataSetReporteCompra;
-        private BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompraTableAdapter reporteCompraTableAdapter;
     }
 }

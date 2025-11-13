@@ -37,7 +37,7 @@
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.reporteCompraTableAdapter = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompraTableAdapter();
+            this.reporteCompraTableAdapter = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_EncabezadoTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             // 
             // reporteCompraBindingSource
             // 
-            this.reporteCompraBindingSource.DataMember = "ReporteCompra";
+            this.reporteCompraBindingSource.DataMember = "ReporteCompra_Encabezado";
             this.reporteCompraBindingSource.DataSource = this.BD_LACTEOSCALEBDataSetReporteCompra;
             // 
             // bD_LACTEOSCALEBDataSetReporteCompra
@@ -208,7 +208,7 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource reporteCompraBindingSource;
         private BD_LACTEOSCALEBDataSetReporteCompra BD_LACTEOSCALEBDataSetReporteCompra;
-        private BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompraTableAdapter reporteCompraTableAdapter;
+        private BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_EncabezadoTableAdapter reporteCompraTableAdapter;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

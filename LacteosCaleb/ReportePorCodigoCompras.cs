@@ -25,7 +25,7 @@ namespace LacteosCaleb
         private void ReportePorCodigoCompras_Load(object sender, EventArgs e)
         {
             // llena el adaptador de tabla con los datos del reporte basado en el ID
-            this.reporteCompraTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteCompra.ReporteCompra, ide);
+            this.reporteCompraTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteCompra.ReporteCompra_Encabezado, ide);
             this.reportViewer1.RefreshReport();// refresca el informe para mostrar los datos actualizados
         }
 
@@ -42,7 +42,7 @@ namespace LacteosCaleb
         private void button1_Click(object sender, EventArgs e)
         {
             // llena el adaptador de tabla con los datos del reporte basado en el ID
-            this.reporteCompraTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteCompra.ReporteCompra, ide);
+            this.reporteCompraTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteCompra.ReporteCompra_Encabezado, ide);
             this.reportViewer1.RefreshReport();//refresca el reporte
         }
     }

@@ -38,10 +38,10 @@ namespace LacteosCaleb
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(
                     new Microsoft.Reporting.WinForms.ReportDataSource("DataSetEncabezado",
-                        (object)this.BD_LACTEOSCALEBDataSetReporteFactura.ReporteFacturaEncabezado));
+                        (System.Data.DataTable)this.BD_LACTEOSCALEBDataSetReporteFactura.ReporteFacturaEncabezado));
                 this.reportViewer1.LocalReport.DataSources.Add(
                     new Microsoft.Reporting.WinForms.ReportDataSource("DataSetDetalle",
-                        (object)this.BD_LACTEOSCALEBDataSetReporteFactura.ReporteFacturaDetalle));
+                        (System.Data.DataTable)this.BD_LACTEOSCALEBDataSetReporteFactura.ReporteFacturaDetalle));
                 this.reportViewer1.RefreshReport();
 
                 // Reactivar restricciones

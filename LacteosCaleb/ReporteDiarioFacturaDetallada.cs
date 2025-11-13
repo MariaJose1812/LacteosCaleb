@@ -19,10 +19,20 @@ namespace LacteosCaleb
 
         private void ReporteDiarioFacturaDetallada_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bD_LACTEOSCALEBDataSetReporteFactura.ReporteFacturaDiaria' Puede moverla o quitarla según sea necesario.
-            this.reporteFacturaDiariaTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteFactura.ReporteFacturaDiaria);
+            // Se debe proporcionar un valor para el parámetro requerido "Fecha".
+            // Aquí se usa la fecha actual como ejemplo. Cambie según su lógica de negocio.
+            DateTime fecha = DateTime.Today;
+
+            // El método Fill no acepta un parámetro de fecha directamente.
+            // Simplemente llama a Fill para llenar la tabla completa.
+            this.reporteFacturaDiariaTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteFactura.ReporteFacturaDiaria, fecha);
 
             this.reportViewer1.RefreshReport();//actualiza la informacion del reporrtviewer
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
