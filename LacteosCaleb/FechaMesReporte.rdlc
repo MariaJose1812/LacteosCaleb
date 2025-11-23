@@ -721,14 +721,10 @@
           <DataField>IdPro</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="IdFacEn">
-          <DataField>IdFacEn</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>BD_LACTEOSCALEBDataSetReporteFactura</rd:DataSetName>
-        <rd:SchemaPath>C:\LacteosCaleb\LacteosCaleb\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteFactura.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\maria\Downloads\LacteosCaleb-master\LacteosCaleb-master\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteFactura.xsd</rd:SchemaPath>
         <rd:TableName>FechaReporteFactura</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

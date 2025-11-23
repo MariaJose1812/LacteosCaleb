@@ -31,40 +31,33 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportePorCodigoCompras));
-            this.reporteCompraBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BD_LACTEOSCALEBDataSetReporteCompra = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompra();
             this.button1 = new System.Windows.Forms.Button();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.reporteCompraTableAdapter = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_EncabezadoTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.reporteCompraBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BD_LACTEOSCALEBDataSetReporteCompra)).BeginInit();
+            this.reporteCompraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BD_LACTEOSCALEBDataSetReporteCompra = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompra();
+            this.reporteCompraTableAdapter = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_EncabezadoTableAdapter();
+            this.reporteCompra_DetalleTableAdapter1 = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_DetalleTableAdapter();
+            this.reporteCompra_EncabezadoTableAdapter1 = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_EncabezadoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporteCompraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BD_LACTEOSCALEBDataSetReporteCompra)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reporteCompraBindingSource
-            // 
-            this.reporteCompraBindingSource.DataMember = "ReporteCompra_Encabezado";
-            this.reporteCompraBindingSource.DataSource = this.BD_LACTEOSCALEBDataSetReporteCompra;
-            // 
-            // bD_LACTEOSCALEBDataSetReporteCompra
-            // 
-            this.BD_LACTEOSCALEBDataSetReporteCompra.DataSetName = "BD_LACTEOSCALEBDataSetReporteCompra";
-            this.BD_LACTEOSCALEBDataSetReporteCompra.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(403, 153);
+            this.button1.Location = new System.Drawing.Point(537, 188);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 27;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -72,9 +65,10 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(151, 157);
+            this.txtDNI.Location = new System.Drawing.Point(201, 193);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(213, 20);
+            this.txtDNI.Size = new System.Drawing.Size(283, 22);
             this.txtDNI.TabIndex = 25;
             this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             // 
@@ -83,9 +77,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(32, 157);
+            this.label6.Location = new System.Drawing.Point(43, 193);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 20);
+            this.label6.Size = new System.Drawing.Size(88, 25);
             this.label6.TabIndex = 26;
             this.label6.Text = "Código:";
             // 
@@ -95,24 +90,22 @@
             reportDataSource1.Value = this.reporteCompraBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LacteosCaleb.ReportCompra.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 197);
+            this.reportViewer1.Location = new System.Drawing.Point(16, 242);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(638, 324);
+            this.reportViewer1.Size = new System.Drawing.Size(850, 398);
             this.reportViewer1.TabIndex = 28;
-            // 
-            // reporteCompraTableAdapter
-            // 
-            this.reporteCompraTableAdapter.ClearBeforeFill = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(251, 64);
+            this.label3.Location = new System.Drawing.Point(335, 79);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 26);
+            this.label3.Size = new System.Drawing.Size(158, 31);
             this.label3.TabIndex = 33;
             this.label3.Text = "COMPRAS";
             // 
@@ -121,9 +114,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(254, 40);
+            this.label2.Location = new System.Drawing.Point(339, 49);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 16);
+            this.label2.Size = new System.Drawing.Size(138, 20);
             this.label2.TabIndex = 32;
             this.label2.Text = "Danlí, El Paraíso";
             // 
@@ -132,19 +126,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(233, 9);
+            this.label1.Location = new System.Drawing.Point(311, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 24);
+            this.label1.Size = new System.Drawing.Size(221, 29);
             this.label1.TabIndex = 31;
             this.label1.Text = "LÁCTEOS CALEB";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(498, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(664, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(89, 89);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
@@ -152,10 +147,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(59, 8);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(79, 10);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(67, 72);
+            this.pictureBox4.Size = new System.Drawing.Size(89, 89);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 29;
             this.pictureBox4.TabStop = false;
@@ -165,18 +160,41 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(210, 90);
+            this.label4.Location = new System.Drawing.Point(280, 111);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 16);
+            this.label4.Size = new System.Drawing.Size(259, 20);
             this.label4.TabIndex = 34;
             this.label4.Text = "Reporte por busqueda de código";
             // 
+            // reporteCompraBindingSource
+            // 
+            this.reporteCompraBindingSource.DataMember = "ReporteCompra_Encabezado";
+            this.reporteCompraBindingSource.DataSource = this.BD_LACTEOSCALEBDataSetReporteCompra;
+            // 
+            // BD_LACTEOSCALEBDataSetReporteCompra
+            // 
+            this.BD_LACTEOSCALEBDataSetReporteCompra.DataSetName = "BD_LACTEOSCALEBDataSetReporteCompra";
+            this.BD_LACTEOSCALEBDataSetReporteCompra.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reporteCompraTableAdapter
+            // 
+            this.reporteCompraTableAdapter.ClearBeforeFill = true;
+            // 
+            // reporteCompra_DetalleTableAdapter1
+            // 
+            this.reporteCompra_DetalleTableAdapter1.ClearBeforeFill = true;
+            // 
+            // reporteCompra_EncabezadoTableAdapter1
+            // 
+            this.reporteCompra_EncabezadoTableAdapter1.ClearBeforeFill = true;
+            // 
             // ReportePorCodigoCompras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(662, 528);
+            this.ClientSize = new System.Drawing.Size(883, 650);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -187,14 +205,15 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.label6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReportePorCodigoCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportePorCodigo";
             this.Load += new System.EventHandler(this.ReportePorCodigoCompras_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.reporteCompraBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BD_LACTEOSCALEBDataSetReporteCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reporteCompraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BD_LACTEOSCALEBDataSetReporteCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +234,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
+        private BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_DetalleTableAdapter reporteCompra_DetalleTableAdapter1;
+        private BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_EncabezadoTableAdapter reporteCompra_EncabezadoTableAdapter1;
     }
 }

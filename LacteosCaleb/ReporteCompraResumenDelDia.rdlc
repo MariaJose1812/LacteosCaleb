@@ -97,7 +97,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetReporteCompraResumenDeldia</DataSetName>
+        <DataSetName>DataSetResumenDiarioCompra</DataSetName>
         <Top>0.36724cm</Top>
         <Left>6.08224cm</Left>
         <Height>1.0148cm</Height>
@@ -204,7 +204,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!FechaCompra.Value, "DataSetReporteCompraResumenDeldia")</Value>
+                  <Value>=First(Fields!FechaCompra.Value, "DataSetResumenDiarioCompra")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -361,7 +361,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetReporteCompraResumenDeldia">
+    <DataSet Name="DataSetResumenDiarioCompra">
       <Query>
         <DataSourceName>BD_LACTEOSCALEBDataSetReporteCompra</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -373,16 +373,16 @@
         </Field>
         <Field Name="TotalCompra">
           <DataField>TotalCompra</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>BD_LACTEOSCALEBDataSetReporteCompra</rd:DataSetName>
-        <rd:SchemaPath>C:\LacteosCaleb\LacteosCaleb\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteCompra.xsd</rd:SchemaPath>
-        <rd:TableName>ReporteCompraResumenDelDia</rd:TableName>
+        <rd:SchemaPath>C:\Users\maria\Downloads\LacteosCaleb-master\LacteosCaleb-master\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteCompra.xsd</rd:SchemaPath>
+        <rd:TableName>ReporteResumenDiarioCompra</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ReporteCompraResumenDelDiaTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>ReporteResumenDiarioCompraTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

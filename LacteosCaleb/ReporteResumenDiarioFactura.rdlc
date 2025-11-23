@@ -451,7 +451,7 @@
         </Field>
         <Field Name="TotalVendido">
           <DataField>TotalVendido</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

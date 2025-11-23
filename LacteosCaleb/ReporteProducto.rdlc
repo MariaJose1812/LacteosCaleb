@@ -778,7 +778,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>BD_LACTEOSCALEBDataSetProductosmasvendidos</rd:DataSetName>
-        <rd:SchemaPath>C:\LacteosCaleb\LacteosCaleb\LacteosCaleb\BD_LACTEOSCALEBDataSetProductosmasvendidos.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\maria\Downloads\LacteosCaleb-master\LacteosCaleb-master\LacteosCaleb\BD_LACTEOSCALEBDataSetProductosmasvendidos.xsd</rd:SchemaPath>
         <rd:TableName>Productosmasvendido</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -806,7 +806,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>BD_LACTEOSCALEBDataSetProductosmasvendidos</rd:DataSetName>
-        <rd:SchemaPath>C:\LacteosCaleb\LacteosCaleb\LacteosCaleb\BD_LACTEOSCALEBDataSetProductosmasvendidos.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\maria\Downloads\LacteosCaleb-master\LacteosCaleb-master\LacteosCaleb\BD_LACTEOSCALEBDataSetProductosmasvendidos.xsd</rd:SchemaPath>
         <rd:TableName>Productosmenosvendido</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

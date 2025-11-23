@@ -19,9 +19,11 @@ namespace LacteosCaleb
             this.fec = fec;// Asigna el valor de fec al campo de la clase this.fec
         }
 
+        // Reemplaza todas las referencias a "ReportepordiaFactura" por "ReportepordiasFactura" en el archivo
+
         private void ReporteElegirFechaFactura_Load(object sender, EventArgs e)
         {
-            this.reportepordiaFacturaTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteFactura.ReportepordiaFactura, fec);// Llena la tabla reportepordiaFactura con datos filtrados por fec
+            this.reportepordiasFacturaTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteFactura.ReportepordiasFactura, fec);// Llena la tabla reportepordiasFactura con datos filtrados por fec
             this.reportViewer1.RefreshReport();// Actualiza el reportviewer para mostrar el nuevo informe
         }
 
@@ -39,7 +41,7 @@ namespace LacteosCaleb
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.reportepordiaFacturaTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteFactura.ReportepordiaFactura, fec);// Llena la tabla reportepordiaFactura con datos filtrados por fec
+            this.reportepordiasFacturaTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteFactura.ReportepordiasFactura, fec);// Llena la tabla reportepordiasFactura con datos filtrados por fec
             this.reportViewer1.RefreshReport();// Actualiza el reportviewer para mostrar el nuevo informe
         }
     }

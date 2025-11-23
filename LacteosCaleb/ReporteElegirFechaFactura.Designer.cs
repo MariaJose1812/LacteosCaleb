@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportepordiaFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportepordiasFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BD_LACTEOSCALEBDataSetReporteFactura = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteFactura();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.reportepordiaFacturaTableAdapter = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteFacturaTableAdapters.ReportepordiaFacturaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.reportepordiaFacturaBindingSource)).BeginInit();
+            this.reportepordiasFacturaTableAdapter = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteFacturaTableAdapters.ReportepordiasFacturaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.reportepordiasFacturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BD_LACTEOSCALEBDataSetReporteFactura)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportepordiaFacturaBindingSource
+            // reportepordiasFacturaBindingSource
             // 
-            this.reportepordiaFacturaBindingSource.DataMember = "ReportepordiaFactura";
-            this.reportepordiaFacturaBindingSource.DataSource = this.BD_LACTEOSCALEBDataSetReporteFactura;
+            this.reportepordiasFacturaBindingSource.DataMember = "ReportepordiasFactura";
+            this.reportepordiasFacturaBindingSource.DataSource = this.BD_LACTEOSCALEBDataSetReporteFactura;
             // 
-            // bD_LACTEOSCALEBDataSetReporteFactura
+            // BD_LACTEOSCALEBDataSetReporteFactura
             // 
             this.BD_LACTEOSCALEBDataSetReporteFactura.DataSetName = "BD_LACTEOSCALEBDataSetReporteFactura";
             this.BD_LACTEOSCALEBDataSetReporteFactura.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
@@ -53,20 +53,22 @@
             // reportViewer1
             // 
             reportDataSource1.Name = "DataSetReporteelegirfecha";
-            reportDataSource1.Value = this.reportepordiaFacturaBindingSource;
+            reportDataSource1.Value = this.reportepordiasFacturaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LacteosCaleb.ReportepordiaFactura.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 79);
+            this.reportViewer1.Location = new System.Drawing.Point(16, 97);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(776, 375);
+            this.reportViewer1.Size = new System.Drawing.Size(1034, 461);
             this.reportViewer1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(219, 47);
+            this.button1.Location = new System.Drawing.Point(292, 58);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 27;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -74,30 +76,32 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(13, 50);
+            this.dateTimePicker1.Location = new System.Drawing.Point(17, 62);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 28;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // reportepordiaFacturaTableAdapter
+            // reportepordiasFacturaTableAdapter
             // 
-            this.reportepordiaFacturaTableAdapter.ClearBeforeFill = true;
+            this.reportepordiasFacturaTableAdapter.ClearBeforeFill = true;
             // 
             // ReporteElegirFechaFactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReporteElegirFechaFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportePorFecha";
             this.Load += new System.EventHandler(this.ReporteElegirFechaFactura_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.reportepordiaFacturaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportepordiasFacturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BD_LACTEOSCALEBDataSetReporteFactura)).EndInit();
             this.ResumeLayout(false);
 
@@ -108,8 +112,8 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.BindingSource reportepordiaFacturaBindingSource;
+        private System.Windows.Forms.BindingSource reportepordiasFacturaBindingSource;
         private BD_LACTEOSCALEBDataSetReporteFactura BD_LACTEOSCALEBDataSetReporteFactura;
-        private BD_LACTEOSCALEBDataSetReporteFacturaTableAdapters.ReportepordiaFacturaTableAdapter reportepordiaFacturaTableAdapter;
+        private BD_LACTEOSCALEBDataSetReporteFacturaTableAdapters.ReportepordiasFacturaTableAdapter reportepordiasFacturaTableAdapter;
     }
 }

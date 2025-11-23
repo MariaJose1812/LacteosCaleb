@@ -476,12 +476,12 @@
         </Field>
         <Field Name="TotalGastado">
           <DataField>TotalGastado</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>BD_LACTEOSCALEBDataSetReporteFactura</rd:DataSetName>
-        <rd:SchemaPath>C:\LacteosCaleb\LacteosCaleb\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteFactura.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\maria\Downloads\LacteosCaleb-master\LacteosCaleb-master\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteFactura.xsd</rd:SchemaPath>
         <rd:TableName>ReporteClienteMasCompra</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

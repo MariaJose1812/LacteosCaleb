@@ -1,4 +1,6 @@
-﻿namespace LacteosCaleb
+﻿using System;
+
+namespace LacteosCaleb
 {
 
 
@@ -10,9 +12,14 @@
     }
 }
 
-namespace LacteosCaleb.BD_LACTEOSCALEBDataSetReporteFacturaTableAdapters {
-    
-    
-    public partial class ReporteFacturaTableAdapter {
+namespace LacteosCaleb.BD_LACTEOSCALEBDataSetReporteFacturaTableAdapters
+{
+    partial class ReporteCodigoFacturaTableAdapter
+    {
+    }
+
+    public partial class ReporteFacturaTableAdapter
+    {
+
     }
 }

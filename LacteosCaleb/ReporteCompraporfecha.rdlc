@@ -798,21 +798,17 @@
           <DataField>IdComp</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="CantCom">
-          <DataField>CantCom</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="PreCom">
-          <DataField>PreCom</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="IdEncabe">
-          <DataField>IdEncabe</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="FecComEnc">
           <DataField>FecComEnc</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="IdPrv">
+          <DataField>IdPrv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomPrv">
+          <DataField>NomPrv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="IdPro">
           <DataField>IdPro</DataField>
@@ -826,18 +822,18 @@
           <DataField>PrePro</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="IdPrv">
-          <DataField>IdPrv</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="CantCom">
+          <DataField>CantCom</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="NomPrv">
-          <DataField>NomPrv</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="PreCom">
+          <DataField>PreCom</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>BD_LACTEOSCALEBDataSetReporteCompra</rd:DataSetName>
-        <rd:SchemaPath>C:\LacteosCaleb\LacteosCaleb\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteCompra.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\maria\Downloads\LacteosCaleb-master\LacteosCaleb-master\LacteosCaleb\BD_LACTEOSCALEBDataSetReporteCompra.xsd</rd:SchemaPath>
         <rd:TableName>ReporteCompraporFecha</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

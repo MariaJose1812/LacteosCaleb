@@ -19,10 +19,19 @@ namespace LacteosCaleb
 
         private void ReporteCompraResumenDeldia_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bD_LACTEOSCALEBDataSetReporteCompra.ReporteCompraResumenDelDia' Puede moverla o quitarla según sea necesario.
             this.reporteCompraResumenDelDiaTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteCompra.ReporteCompraResumenDelDia);
 
-            this.reportViewer1.RefreshReport();//actualiza los datos del reportviewer para mostrarlos nuevamente
+            this.reportViewer1.LocalReport.DataSources.Clear();
+
+            Microsoft.Reporting.WinForms.ReportDataSource rds = new Microsoft.Reporting.WinForms.ReportDataSource(
+                "DataSetResumenDiarioCompra",
+                (System.Data.DataTable)this.BD_LACTEOSCALEBDataSetReporteCompra.ReporteCompraResumenDelDia
+            );
+
+            
+            this.reportViewer1.LocalReport.DataSources.Add(rds);
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }
