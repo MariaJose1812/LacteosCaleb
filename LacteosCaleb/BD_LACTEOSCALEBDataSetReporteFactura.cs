@@ -20,6 +20,9 @@ namespace LacteosCaleb.BD_LACTEOSCALEBDataSetReporteFacturaTableAdapters
 
     public partial class ReporteFacturaTableAdapter
     {
-
+        internal void Fill(BD_LACTEOSCALEBDataSetReporteFactura.ReporteCodigoFacturaDataTable reporteCodigoFactura, int ide)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -235,10 +235,10 @@ namespace LacteosCaleb
             else
             {
                 int ide = int.Parse(txtCompra.Text);
-                DateTime fec = dateTimePicker1.Value;
+                DateTime fec = DateTime.Now;
                 string prov = txtprovedorr.Text;
 
-                string fechaSQL = fec.ToString("yyyy-MM-dd HH:mm:ss"); // ✅ Formato seguro
+                string fechaSQL = fec.ToString("yyyy-MM-dd HH:mm:ss"); 
 
                 // Encabezado
                 Conex.Modificaciones($"exec comdetal '{ide}', '{fechaSQL}', '{prov}'");
@@ -257,7 +257,7 @@ namespace LacteosCaleb
 
                     int idd = Convert.ToInt32(dataGridView1.Rows[row].Cells[0].Value);// variable que guarda la primer posicion del datagrid que pertenece al id del producto
                     int cant = Convert.ToInt32(dataGridView1.Rows[row].Cells[2].Value);//variable que guarda la tercer posicion del datagrid que tiene la cantidad
-                    int preci = Convert.ToInt32(dataGridView1.Rows[row].Cells[4].Value);//variable que guarda la quinta posicion en el datagrid que tiene el precio
+                    int preci = Convert.ToInt32(dataGridView1.Rows[row].Cells[3].Value);//variable que guarda la quinta posicion en el datagrid que tiene el precio
 
                     //Linea de codigo mediante la funcion modificaciones que guarda los parametros de las variables hechas en la base de datos en SQL SERVER 2019 mediante un procedimiento almacenado
                     Conex.Modificaciones("exec InsertCompraDetalle '" + ide + "', '" + idd + "', '" + cant + "', '" + preci + "' ");

@@ -7023,6 +7023,24 @@ namespace LacteosCaleb {
             
             private global::System.Data.DataColumn columnPreFacDe;
             
+            private global::System.Data.DataColumn columnCodigo;
+            
+            private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnIdentidad;
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnCódigo;
+            
+            private global::System.Data.DataColumn columnProducto;
+            
+            private global::System.Data.DataColumn columnCantidad;
+            
+            private global::System.Data.DataColumn columnPrecioUnitario;
+            
+            private global::System.Data.DataColumn columnLinea;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ReporteCodigoFacturaDataTable() {
@@ -7130,6 +7148,78 @@ namespace LacteosCaleb {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CodigoColumn {
+                get {
+                    return this.columnCodigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IdentidadColumn {
+                get {
+                    return this.columnIdentidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CódigoColumn {
+                get {
+                    return this.columnCódigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ProductoColumn {
+                get {
+                    return this.columnProducto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CantidadColumn {
+                get {
+                    return this.columnCantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PrecioUnitarioColumn {
+                get {
+                    return this.columnPrecioUnitario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LineaColumn {
+                get {
+                    return this.columnLinea;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -7165,7 +7255,23 @@ namespace LacteosCaleb {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ReporteCodigoFacturaRow AddReporteCodigoFacturaRow(System.DateTime FecFacEn, string DNI, string NomCli, int IdPro, string NomPro, int CantFacDe, int PrePro, int PreFacDe) {
+            public ReporteCodigoFacturaRow AddReporteCodigoFacturaRow(
+                        System.DateTime FecFacEn, 
+                        string DNI, 
+                        string NomCli, 
+                        int IdPro, 
+                        string NomPro, 
+                        int CantFacDe, 
+                        int PrePro, 
+                        int PreFacDe, 
+                        System.DateTime Fecha, 
+                        string Identidad, 
+                        string Nombre, 
+                        int Código, 
+                        string Producto, 
+                        int Cantidad, 
+                        int PrecioUnitario, 
+                        int Linea) {
                 ReporteCodigoFacturaRow rowReporteCodigoFacturaRow = ((ReporteCodigoFacturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -7176,7 +7282,16 @@ namespace LacteosCaleb {
                         NomPro,
                         CantFacDe,
                         PrePro,
-                        PreFacDe};
+                        PreFacDe,
+                        null,
+                        Fecha,
+                        Identidad,
+                        Nombre,
+                        Código,
+                        Producto,
+                        Cantidad,
+                        PrecioUnitario,
+                        Linea};
                 rowReporteCodigoFacturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReporteCodigoFacturaRow);
                 return rowReporteCodigoFacturaRow;
@@ -7208,6 +7323,15 @@ namespace LacteosCaleb {
                 this.columnCantFacDe = base.Columns["CantFacDe"];
                 this.columnPrePro = base.Columns["PrePro"];
                 this.columnPreFacDe = base.Columns["PreFacDe"];
+                this.columnCodigo = base.Columns["Codigo"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnIdentidad = base.Columns["Identidad"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnCódigo = base.Columns["Código"];
+                this.columnProducto = base.Columns["Producto"];
+                this.columnCantidad = base.Columns["Cantidad"];
+                this.columnPrecioUnitario = base.Columns["PrecioUnitario"];
+                this.columnLinea = base.Columns["Linea"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7231,6 +7355,24 @@ namespace LacteosCaleb {
                 base.Columns.Add(this.columnPrePro);
                 this.columnPreFacDe = new global::System.Data.DataColumn("PreFacDe", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPreFacDe);
+                this.columnCodigo = new global::System.Data.DataColumn("Codigo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCodigo);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnIdentidad = new global::System.Data.DataColumn("Identidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdentidad);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnCódigo = new global::System.Data.DataColumn("Código", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCódigo);
+                this.columnProducto = new global::System.Data.DataColumn("Producto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProducto);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad);
+                this.columnPrecioUnitario = new global::System.Data.DataColumn("PrecioUnitario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecioUnitario);
+                this.columnLinea = new global::System.Data.DataColumn("Linea", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLinea);
                 this.columnIdFactEn.AutoIncrement = true;
                 this.columnIdFactEn.AllowDBNull = false;
                 this.columnIdFactEn.ReadOnly = true;
@@ -7245,6 +7387,21 @@ namespace LacteosCaleb {
                 this.columnCantFacDe.AllowDBNull = false;
                 this.columnPrePro.AllowDBNull = false;
                 this.columnPreFacDe.AllowDBNull = false;
+                this.columnCodigo.AutoIncrement = true;
+                this.columnCodigo.AutoIncrementSeed = -1;
+                this.columnCodigo.AutoIncrementStep = -1;
+                this.columnCodigo.AllowDBNull = false;
+                this.columnCodigo.ReadOnly = true;
+                this.columnIdentidad.AllowDBNull = false;
+                this.columnIdentidad.MaxLength = 15;
+                this.columnNombre.AllowDBNull = false;
+                this.columnNombre.MaxLength = 30;
+                this.columnCódigo.AllowDBNull = false;
+                this.columnProducto.AllowDBNull = false;
+                this.columnProducto.MaxLength = 50;
+                this.columnCantidad.AllowDBNull = false;
+                this.columnPrecioUnitario.AllowDBNull = false;
+                this.columnLinea.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9876,6 +10033,122 @@ namespace LacteosCaleb {
                 set {
                     this[this.tableReporteCodigoFactura.PreFacDeColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Codigo {
+                get {
+                    return ((int)(this[this.tableReporteCodigoFactura.CodigoColumn]));
+                }
+                set {
+                    this[this.tableReporteCodigoFactura.CodigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Fecha {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableReporteCodigoFactura.FechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'ReporteCodigoFactura\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReporteCodigoFactura.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Identidad {
+                get {
+                    return ((string)(this[this.tableReporteCodigoFactura.IdentidadColumn]));
+                }
+                set {
+                    this[this.tableReporteCodigoFactura.IdentidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nombre {
+                get {
+                    return ((string)(this[this.tableReporteCodigoFactura.NombreColumn]));
+                }
+                set {
+                    this[this.tableReporteCodigoFactura.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Código {
+                get {
+                    return ((int)(this[this.tableReporteCodigoFactura.CódigoColumn]));
+                }
+                set {
+                    this[this.tableReporteCodigoFactura.CódigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Producto {
+                get {
+                    return ((string)(this[this.tableReporteCodigoFactura.ProductoColumn]));
+                }
+                set {
+                    this[this.tableReporteCodigoFactura.ProductoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Cantidad {
+                get {
+                    return ((int)(this[this.tableReporteCodigoFactura.CantidadColumn]));
+                }
+                set {
+                    this[this.tableReporteCodigoFactura.CantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int PrecioUnitario {
+                get {
+                    return ((int)(this[this.tableReporteCodigoFactura.PrecioUnitarioColumn]));
+                }
+                set {
+                    this[this.tableReporteCodigoFactura.PrecioUnitarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Linea {
+                get {
+                    return ((int)(this[this.tableReporteCodigoFactura.LineaColumn]));
+                }
+                set {
+                    this[this.tableReporteCodigoFactura.LineaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableReporteCodigoFactura.FechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFechaNull() {
+                this[this.tableReporteCodigoFactura.FechaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -17332,6 +17605,15 @@ SELECT NomUsu, ConUsu, RolUsu, EstUsu FROM USUARIOS WHERE (NomUsu = @NomUsu)";
             tableMapping.ColumnMappings.Add("CantFacDe", "CantFacDe");
             tableMapping.ColumnMappings.Add("PrePro", "PrePro");
             tableMapping.ColumnMappings.Add("PreFacDe", "PreFacDe");
+            tableMapping.ColumnMappings.Add("Codigo", "Codigo");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("Identidad", "Identidad");
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Código", "Código");
+            tableMapping.ColumnMappings.Add("Producto", "Producto");
+            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
+            tableMapping.ColumnMappings.Add("PrecioUnitario", "PrecioUnitario");
+            tableMapping.ColumnMappings.Add("Linea", "Linea");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

@@ -208,7 +208,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -464,7 +463,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!PreCom.Value, "DataSetDetalle")</Value>
+                              <Value>=Sum(Fields!TotalLinea.Value, "DataSetDetalle")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -618,7 +617,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!PreCom.Value, "DataSetDetalle")</Value>
+                              <Value>=Sum(Fields!TotalLinea.Value, "DataSetDetalle")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>

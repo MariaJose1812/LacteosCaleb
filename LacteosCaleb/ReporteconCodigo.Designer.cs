@@ -65,7 +65,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(175, 161);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(283, 22);
             this.txtDNI.TabIndex = 20;
@@ -90,11 +90,12 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LacteosCaleb.ReporteCodigoFactura.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(16, 214);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(845, 440);
             this.reportViewer1.TabIndex = 23;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // ReporteCodigoFacturaTableAdapter
             // 
@@ -103,7 +104,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(511, 156);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 24;
@@ -205,7 +206,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReporteconCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportePorCodigo";

@@ -140,32 +140,58 @@ namespace LacteosCaleb
         }
 
         private void label3_Click(object sender, EventArgs e)
-        { // pregunta al usuario si desea eliminar el cliente
+        {
+            // Pregunta al usuario si desea eliminar el cliente
             if (MessageBox.Show("¿QUIERES ELIMINAR EL CLIENTE?", "ELIMINAR CLIENTE", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                string ideli = textBox1.Text;//variable que guarda el DNI 
+                try // 1. ABRIMOS EL BLOQUE "INTENTAR"
+                {
+                    string ideli = textBox1.Text;
 
-                // ejecuta el procedimiento almacenado para eliminar un cliente
-                conex.Modificaciones("exec deletecliente '" + ideli + "'");
-                MessageBox.Show("CLIENTE ELIMINADO CORRECTAMENTE");//mensaje de confirmacion de eliminación 
+                    // 2. Intentamos ejecutar el procedimiento
+                    // Si el cliente tiene facturas, AQUÍ saltará el error y se irá directo al "catch"
+                    conex.Modificaciones("exec deletecliente '" + ideli + "'");
 
-                // actualiza el DataGridView con los nuevos datos
-                conex.Grids("select DNI as DNI, NomCli as NOMBRE ,CorCli as CORREO, TelCli as TELEFONO from CLIENTE", dtgcliente);
+                    // --- Si llega a esta línea, es que se borró con éxito ---
+                    MessageBox.Show("CLIENTE ELIMINADO CORRECTAMENTE");
 
-                //limpia los textboxs
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
-                textBox4.Clear();
+                    // Actualiza el DataGridView
+                    conex.Grids("select DNI as DNI, NomCli as NOMBRE ,CorCli as CORREO, TelCli as TELEFONO from CLIENTE", dtgcliente);
 
-                DateTime fec = dateTimePicker1.Value;
-                string fechaSql = fec.ToString("yyyy-MM-dd HH:mm:ss"); // formato compatible
-                string acti = "Eliminó en CLIENTES";
-                string usariolabel = TxtUsuarioLabel.Text;
+                    // Limpia los textboxs
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
 
-                conex.Modificaciones($"exec IngresarBitacora '{fechaSql}', '{usariolabel}', '{acti}'");
+                    // Guardar en Bitácora (Solo si se eliminó con éxito)
+                    DateTime fec = dateTimePicker1.Value;
+                    string fechaSql = fec.ToString("yyyy-MM-dd HH:mm:ss");
+                    string acti = "Eliminó en CLIENTES";
+                    string usariolabel = TxtUsuarioLabel.Text;
 
-
+                    conex.Modificaciones($"exec IngresarBitacora '{fechaSql}', '{usariolabel}', '{acti}'");
+                }
+                catch (System.Data.SqlClient.SqlException ex) // 3. CAPTURAMOS EL ERROR DE SQL
+                {
+                    // El número 547 es el código universal de "No puedo borrar porque se usa en otra tabla"
+                    if (ex.Number == 547)
+                    {
+                        MessageBox.Show("⚠️ NO SE PUEDE ELIMINAR ESTE CLIENTE.\n\n" +
+                                        "Causa: El cliente tiene FACTURAS o historial en el sistema.\n" +
+                                        "El sistema impide borrarlo para no perder los datos de las ventas.",
+                                        "Protección de Integridad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        // Si es otro error de SQL (conexión caída, sintaxis, etc.)
+                        MessageBox.Show("Error de Base de Datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex) // 4. CUALQUIER OTRO ERROR NO PREVISTO
+                {
+                    MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
+                }
             }
         }
 

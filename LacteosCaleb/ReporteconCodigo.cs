@@ -38,7 +38,7 @@ namespace LacteosCaleb
 
             if (int.TryParse(txtDNI.Text, out int nuevoValor))// Intenta convertir el texto de txtDNI a un entero y lo guarda en nuevoValor
             {
-                
+
                 AsignarNuevoValor(nuevoValor);// Llama a la función AsignarNuevoValor con el nuevoValor como argumento
             }
 
@@ -48,34 +48,38 @@ namespace LacteosCaleb
         {
             try
             {
-                // 1. Obtener el ID
                 if (!string.IsNullOrEmpty(txtDNI.Text))
                 {
                     ide = Convert.ToInt32(txtDNI.Text);
                 }
 
-                // 2. Llenar el DataSet (Aquí llenas la tabla 'ReporteFactura')
                 this.BD_LACTEOSCALEBDataSetReporteFactura.EnforceConstraints = false;
-                this.ReporteCodigoFacturaTableAdapter.Fill(this.BD_LACTEOSCALEBDataSetReporteFactura.ReporteFactura, ide);
 
-                // 3. Configurar el ReportViewer
+                // 1. Llenar la tabla correcta
+                this.ReporteCodigoFacturaTableAdapter.Fill(
+                    this.BD_LACTEOSCALEBDataSetReporteFactura.ReporteFactura, ide);
+
+                // 2. Conectar con el ReportViewer
                 this.reportViewer1.LocalReport.DataSources.Clear();
 
-                // CORRECCIÓN IMPORTANTE AQUÍ:
-                // 1. Usamos .ReporteFactura (que es la tabla que llenaste arriba).
-                // 2. Agregamos (System.Data.DataTable) para evitar el error de ambigüedad.
-                ReportDataSource rds = new ReportDataSource("DataSet1",
-                    (System.Data.DataTable)this.BD_LACTEOSCALEBDataSetReporteFactura.ReporteFactura);
+                ReportDataSource rds = new ReportDataSource(
+                "DataSet1",
+                this.BD_LACTEOSCALEBDataSetReporteFactura.Tables["ReporteFactura"]);
 
                 this.reportViewer1.LocalReport.DataSources.Add(rds);
 
-                // 4. Refrescar
                 this.reportViewer1.RefreshReport();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

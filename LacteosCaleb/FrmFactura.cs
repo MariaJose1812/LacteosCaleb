@@ -149,7 +149,7 @@ namespace LacteosCaleb
             calcular();// llamado que hace que la funcion que hace que automaticamente se calcule el subtotal, impuesto y total
 
             DateTime fec = dateTimePicker1.Value;
-            string fechaSQL = fec.ToString("yyyy-MM-dd HH:mm:ss"); // formato compatible
+            string fechaSQL = fec.ToString("yyyy-MM-dd"); // formato compatible
             string acti = "Eliminó en FACTURA";
             string usariolabel = txtUsuario.Text;
 
@@ -312,7 +312,7 @@ namespace LacteosCaleb
                         {
                             int idProd = Convert.ToInt32(row.Cells[0].Value);
                             int cantidad = Convert.ToInt32(row.Cells[2].Value);
-                            decimal precio = Convert.ToDecimal(row.Cells[4].Value);
+                            decimal precio = Convert.ToDecimal(row.Cells[3].Value);
 
                             // Insertar detalle de factura
                             using (SqlCommand cmd = new SqlCommand("FacturaDet", conn))

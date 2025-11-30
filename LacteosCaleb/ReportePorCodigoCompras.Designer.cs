@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportePorCodigoCompras));
+            this.reporteCompraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BD_LACTEOSCALEBDataSetReporteCompra = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompra();
             this.button1 = new System.Windows.Forms.Button();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,21 +43,29 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.reporteCompraBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BD_LACTEOSCALEBDataSetReporteCompra = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompra();
             this.reporteCompraTableAdapter = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_EncabezadoTableAdapter();
             this.reporteCompra_DetalleTableAdapter1 = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_DetalleTableAdapter();
             this.reporteCompra_EncabezadoTableAdapter1 = new LacteosCaleb.BD_LACTEOSCALEBDataSetReporteCompraTableAdapters.ReporteCompra_EncabezadoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteCompraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BD_LACTEOSCALEBDataSetReporteCompra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reporteCompraBindingSource
+            // 
+            this.reporteCompraBindingSource.DataMember = "ReporteCompra_Encabezado";
+            this.reporteCompraBindingSource.DataSource = this.BD_LACTEOSCALEBDataSetReporteCompra;
+            // 
+            // BD_LACTEOSCALEBDataSetReporteCompra
+            // 
+            this.BD_LACTEOSCALEBDataSetReporteCompra.DataSetName = "BD_LACTEOSCALEBDataSetReporteCompra";
+            this.BD_LACTEOSCALEBDataSetReporteCompra.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(537, 188);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 27;
@@ -66,7 +76,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(201, 193);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(283, 22);
             this.txtDNI.TabIndex = 25;
@@ -91,11 +101,12 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LacteosCaleb.ReportCompra.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(16, 242);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(850, 398);
             this.reportViewer1.TabIndex = 28;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // label3
             // 
@@ -167,16 +178,6 @@
             this.label4.TabIndex = 34;
             this.label4.Text = "Reporte por busqueda de código";
             // 
-            // reporteCompraBindingSource
-            // 
-            this.reporteCompraBindingSource.DataMember = "ReporteCompra_Encabezado";
-            this.reporteCompraBindingSource.DataSource = this.BD_LACTEOSCALEBDataSetReporteCompra;
-            // 
-            // BD_LACTEOSCALEBDataSetReporteCompra
-            // 
-            this.BD_LACTEOSCALEBDataSetReporteCompra.DataSetName = "BD_LACTEOSCALEBDataSetReporteCompra";
-            this.BD_LACTEOSCALEBDataSetReporteCompra.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // reporteCompraTableAdapter
             // 
             this.reporteCompraTableAdapter.ClearBeforeFill = true;
@@ -205,15 +206,15 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportePorCodigoCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportePorCodigo";
             this.Load += new System.EventHandler(this.ReportePorCodigoCompras_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteCompraBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BD_LACTEOSCALEBDataSetReporteCompra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

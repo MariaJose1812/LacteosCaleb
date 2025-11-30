@@ -56,7 +56,7 @@
             this.bDLACTEOSCALEBDataSetProductosmasvendidosBindingSource.DataSource = this.BD_LACTEOSCALEBDataSetProductosmasvendidos;
             this.bDLACTEOSCALEBDataSetProductosmasvendidosBindingSource.Position = 0;
             // 
-            // bD_LACTEOSCALEBDataSetProductosmasvendidos
+            // BD_LACTEOSCALEBDataSetProductosmasvendidos
             // 
             this.BD_LACTEOSCALEBDataSetProductosmasvendidos.DataSetName = "BD_LACTEOSCALEBDataSetProductosmasvendidos";
             this.BD_LACTEOSCALEBDataSetProductosmasvendidos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
@@ -82,10 +82,12 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LacteosCaleb.ReporteProducto.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(1067, 554);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // productosmasvendidoTableAdapter
             // 
@@ -97,10 +99,11 @@
             // 
             // ProductosReportecs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProductosReportecs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PRODUCTOS";

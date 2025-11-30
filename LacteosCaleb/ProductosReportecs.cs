@@ -27,5 +27,10 @@ namespace LacteosCaleb
 
             this.reportViewer1.RefreshReport();//reinicia la herramienta reportviewer, la refresca
         }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
